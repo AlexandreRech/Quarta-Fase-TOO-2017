@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Arquitetura do Sistema", "1. Arquitetura do Sistema", "{D810B3D9-E4A7-425E-B168-A6BA9B2D6AE6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Unidades", "2. Unidades", "{C3A9BDC0-45BC-4C6F-9B32-EACDD1BA8AC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eAgenda.ConsoleApp", "Projetos\Arquitetura\eAgenda.ConsoleApp\eAgenda.ConsoleApp.csproj", "{79FB85F3-DC2C-48BF-9BF5-B0FBF85AB3E1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79FB85F3-DC2C-48BF-9BF5-B0FBF85AB3E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79FB85F3-DC2C-48BF-9BF5-B0FBF85AB3E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79FB85F3-DC2C-48BF-9BF5-B0FBF85AB3E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79FB85F3-DC2C-48BF-9BF5-B0FBF85AB3E1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{79FB85F3-DC2C-48BF-9BF5-B0FBF85AB3E1} = {D810B3D9-E4A7-425E-B168-A6BA9B2D6AE6}
+	EndGlobalSection
+EndGlobal
