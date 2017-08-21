@@ -1,11 +1,25 @@
-﻿namespace eAgenda.ConsoleApp
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace eAgenda.ConsoleApp
 {
-    static class Program
+    class Program
     {
-      
-        static void Main()
+        static void Main(string[] args)
         {
-            
+            CadastroConsole cadastroSelecionado = null;
+
+            do
+            {
+                cadastroSelecionado = CadastroConsole.SelecionarCadastro();
+
+                if (cadastroSelecionado != null)
+                    cadastroSelecionado.MostrarMenu();
+
+            } while (cadastroSelecionado != null);
         }
     }
 }
