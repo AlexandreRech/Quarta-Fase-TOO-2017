@@ -17,6 +17,11 @@ namespace eAgenda.ConsoleApp
             Cargo = cargo;
         }
 
+        public static int OrdenarPeloNome(Contato a, Contato b)
+        {
+            return string.Compare(a.Nome, b.Nome);
+        }
+
         public string Nome { get; set; }
 
         public string Email { get; set; }

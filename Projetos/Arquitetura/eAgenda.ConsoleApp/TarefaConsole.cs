@@ -36,6 +36,7 @@ namespace eAgenda.ConsoleApp
                 return false;
             }
 
+            #region inserção de subitens
             ConsoleKey opcao;
 
             Console.WriteLine();
@@ -55,6 +56,8 @@ namespace eAgenda.ConsoleApp
 
             } while (opcao != ConsoleKey.Enter);
 
+            #endregion
+
             RegistrarNovaTarefa(novaTarefa);
 
             return true;
@@ -71,6 +74,7 @@ namespace eAgenda.ConsoleApp
 
             MostrarDetalhesTarefa(tarefaEncontrada);
 
+            #region atualização de subitens
             MostrarSubMenuDeAtualizacao();
 
             ConsoleKey opcao = Console.ReadKey().Key;
@@ -131,6 +135,7 @@ namespace eAgenda.ConsoleApp
                 opcao = Console.ReadKey().Key;
 
             } while (opcao != ConsoleKey.Escape);
+            #endregion
 
             AtualizarTarefa(tarefaEncontrada);
 

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace eAgenda.ConsoleApp
 {
@@ -12,9 +12,9 @@ namespace eAgenda.ConsoleApp
 
         private static List<Contato> _contatos = new List<Contato>();
 
-        public ContatoConsole() : base("Cadastro de Contatos")
+        public ContatoConsole() 
+            : base("Cadastro de Contatos")
         {
-
         }
 
         public override bool InserirRegistro()
@@ -120,6 +120,15 @@ namespace eAgenda.ConsoleApp
 
                     case ConsoleKey.F2:
                         Console.Clear();
+                        Console.WriteLine("Visualizando Contatos por Ordem Alfabética: ");
+                        Console.WriteLine();
+
+                        MostrarContatosPorOrdemAlfabetica();
+
+                        break;
+
+                    case ConsoleKey.F3:
+                        Console.Clear();
                         Console.WriteLine("Visualizando Todos Contatos: ");
                         Console.WriteLine();
 
@@ -138,7 +147,31 @@ namespace eAgenda.ConsoleApp
             return false;
         }
 
+        private void MostrarContatosPorOrdemAlfabetica()
+        {            
+            //List<Contato> contatosOrdenados = new List<Contato>(_contatos);
+            
+            /**ordenação utilizando delegates
+            contatosOrdenados.Sort(Contato.OrdenarPeloNome);
+            */
+
+            /**métodos anônimos
+            contatosOrdenados.Sort(delegate(Contato a, Contato b) 
+            {
+                return string.Compare(a.Nome, b.Nome);
+            });
+            */
+
+            /**expressão lambda
+            contatosOrdenados.Sort((a, b) => string.Compare(a.Nome, b.Nome));
+            */
+
+            //Extesion Methods + Collections + Generics + Expressão Lambda
+            MostrarContatos(_contatos.OrderBy(c => c.Nome).ToList());
+        }
+
        
+        
 
         #region métodos privados
         private Contato SelecionarContatoPorNumero(int numero)
@@ -217,9 +250,9 @@ namespace eAgenda.ConsoleApp
 
             Console.WriteLine("Digite F1 para visualizar Contatos Agrupados por Cargo");
 
-            Console.WriteLine("Digite F2 para visualizar Todos Contatos");
+            Console.WriteLine("Digite F2 para visualizar Contatos Ordenados por Ordem Alfabética");
 
-            Console.WriteLine("Digite F3 para visualizar os Contatos Ordenados");
+            Console.WriteLine("Digite F3 para visualizar Todos Contatos");           
 
             Console.WriteLine("Digite Esc para Voltar");
         }
