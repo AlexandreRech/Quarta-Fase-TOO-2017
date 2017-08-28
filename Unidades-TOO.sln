@@ -31,6 +31,33 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegularExpressionApp", "Pro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitConsoleApp", "Projetos\Unidades\Unidade 1\SplitConsoleApp\SplitConsoleApp.csproj", "{9C4A545B-39AB-4403-BDE0-D1E625C24765}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "b. Unidade 2", "b. Unidade 2", "{276A622D-1EAA-475F-ADA3-F69522A9B71F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exemplos", "Exemplos", "{1182FB3F-6907-43FA-9096-F9FAC7D03B36}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Material", "Material", "{2EFF1FF4-D553-435F-90A5-18AA6F926B5F}"
+	ProjectSection(SolutionItems) = preProject
+		Material\Unidade 1\Unidade 1 - Classes Abstratas.pdf = Material\Unidade 1\Unidade 1 - Classes Abstratas.pdf
+		Material\Unidade 1\Unidade 1 - Collections.pdf = Material\Unidade 1\Unidade 1 - Collections.pdf
+		Material\Unidade 1\Unidade 1 - Delegates.pdf = Material\Unidade 1\Unidade 1 - Delegates.pdf
+		Material\Unidade 1\Unidade 1 - Exceções.pdf = Material\Unidade 1\Unidade 1 - Exceções.pdf
+		Material\Unidade 1\Unidade 1 - Generics1.pdf = Material\Unidade 1\Unidade 1 - Generics1.pdf
+		Material\Unidade 1\Unidade 1 - Generics2.pdf = Material\Unidade 1\Unidade 1 - Generics2.pdf
+		Material\Unidade 1\Unidade 1 - Interfaces.pdf = Material\Unidade 1\Unidade 1 - Interfaces.pdf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Material", "Material", "{59DEC8F8-BEE6-40B0-94D5-616FF1046ABD}"
+	ProjectSection(SolutionItems) = preProject
+		Material\Unidade 2\Desenvolvimento de software em camadas.docx = Material\Unidade 2\Desenvolvimento de software em camadas.docx
+		Material\Unidade 2\eforms.jpg = Material\Unidade 2\eforms.jpg
+		Material\Unidade 2\Unidade 2 - Arquitetura Final.pptx = Material\Unidade 2\Unidade 2 - Arquitetura Final.pptx
+		Material\Unidade 2\Unidade 2 - Camadas.pdf = Material\Unidade 2\Unidade 2 - Camadas.pdf
+		Material\Unidade 2\Unidade 2 - Resumido - Camadas.pptx = Material\Unidade 2\Unidade 2 - Resumido - Camadas.pptx
+		Material\Unidade 2\Unidade 2 - Resumido - DDD.pptx = Material\Unidade 2\Unidade 2 - Resumido - DDD.pptx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exemplos", "Exemplos", "{7E6AE63C-3629-4456-8ACB-65C48ACBAFE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -88,15 +115,20 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{79FB85F3-DC2C-48BF-9BF5-B0FBF85AB3E1} = {D810B3D9-E4A7-425E-B168-A6BA9B2D6AE6}
 		{0F3B185B-9185-40E5-A73C-2D50BB22957B} = {C3A9BDC0-45BC-4C6F-9B32-EACDD1BA8AC9}
-		{0D910D28-CC47-4316-885C-BC86421A3873} = {0F3B185B-9185-40E5-A73C-2D50BB22957B}
-		{4D0FE85B-B5C9-45E3-B310-A5A90B71C1EE} = {0F3B185B-9185-40E5-A73C-2D50BB22957B}
-		{5200D9E0-0A89-474F-BE7A-EE438B08459E} = {0F3B185B-9185-40E5-A73C-2D50BB22957B}
-		{4D39EBBA-092E-4FA8-944F-CA99C301B4C4} = {0F3B185B-9185-40E5-A73C-2D50BB22957B}
-		{7F9C37A8-2BA2-4314-AEB5-9554B23847A6} = {0F3B185B-9185-40E5-A73C-2D50BB22957B}
-		{0F1F7F88-72BF-4199-8030-F33ED719CB8E} = {0F3B185B-9185-40E5-A73C-2D50BB22957B}
-		{5DBD8DC3-E332-458E-87B4-29ED91E346BC} = {0F3B185B-9185-40E5-A73C-2D50BB22957B}
-		{E627F9D4-9A39-4E4D-9AB1-EBC1D2C8FF17} = {0F3B185B-9185-40E5-A73C-2D50BB22957B}
-		{BDD6EB16-C207-4B1E-AD08-1127E6AE14E5} = {0F3B185B-9185-40E5-A73C-2D50BB22957B}
-		{9C4A545B-39AB-4403-BDE0-D1E625C24765} = {0F3B185B-9185-40E5-A73C-2D50BB22957B}
+		{0D910D28-CC47-4316-885C-BC86421A3873} = {1182FB3F-6907-43FA-9096-F9FAC7D03B36}
+		{4D0FE85B-B5C9-45E3-B310-A5A90B71C1EE} = {1182FB3F-6907-43FA-9096-F9FAC7D03B36}
+		{5200D9E0-0A89-474F-BE7A-EE438B08459E} = {1182FB3F-6907-43FA-9096-F9FAC7D03B36}
+		{4D39EBBA-092E-4FA8-944F-CA99C301B4C4} = {1182FB3F-6907-43FA-9096-F9FAC7D03B36}
+		{7F9C37A8-2BA2-4314-AEB5-9554B23847A6} = {1182FB3F-6907-43FA-9096-F9FAC7D03B36}
+		{0F1F7F88-72BF-4199-8030-F33ED719CB8E} = {1182FB3F-6907-43FA-9096-F9FAC7D03B36}
+		{5DBD8DC3-E332-458E-87B4-29ED91E346BC} = {1182FB3F-6907-43FA-9096-F9FAC7D03B36}
+		{E627F9D4-9A39-4E4D-9AB1-EBC1D2C8FF17} = {1182FB3F-6907-43FA-9096-F9FAC7D03B36}
+		{BDD6EB16-C207-4B1E-AD08-1127E6AE14E5} = {1182FB3F-6907-43FA-9096-F9FAC7D03B36}
+		{9C4A545B-39AB-4403-BDE0-D1E625C24765} = {1182FB3F-6907-43FA-9096-F9FAC7D03B36}
+		{276A622D-1EAA-475F-ADA3-F69522A9B71F} = {C3A9BDC0-45BC-4C6F-9B32-EACDD1BA8AC9}
+		{1182FB3F-6907-43FA-9096-F9FAC7D03B36} = {0F3B185B-9185-40E5-A73C-2D50BB22957B}
+		{2EFF1FF4-D553-435F-90A5-18AA6F926B5F} = {0F3B185B-9185-40E5-A73C-2D50BB22957B}
+		{59DEC8F8-BEE6-40B0-94D5-616FF1046ABD} = {276A622D-1EAA-475F-ADA3-F69522A9B71F}
+		{7E6AE63C-3629-4456-8ACB-65C48ACBAFE7} = {276A622D-1EAA-475F-ADA3-F69522A9B71F}
 	EndGlobalSection
 EndGlobal
