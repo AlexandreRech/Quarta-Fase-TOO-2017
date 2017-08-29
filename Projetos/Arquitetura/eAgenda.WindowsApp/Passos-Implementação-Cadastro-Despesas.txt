@@ -1,0 +1,23 @@
+﻿1 - Adicionar Item no menu "Despesas"
+
+2 - Renomear o item para despesasMenuItem
+
+3 - Implementar o método do evento on_click 
+
+4 - Criar a classe "DespesaFormsManager"
+
+5 - Criar o formulário "DespesaDialog"
+
+6 - Implementar os métodos abstratos da classe "FormsManager"
+    6.1 No método Adicionar() chamar o "DespesaDialog"
+    6.2 No método ObtemTipo() retornar o tipo de Cadastro
+
+7 - Adicionar os botões "Gravar" e "Cancelar" no formulário
+    7.1 Configurar as propriedades DialogResult
+    
+8 - Criar a classe "ControladorDespesa"     
+
+9 - No método Adicionar, chamar o método RegistrarNovoContato do ControladorDespesa
+
+
+
