@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace eAgenda.ConsoleApp
+namespace eAgenda.Dominio.ContatoModule
 {
     [Serializable]
-    internal class ContatoNaoEncontradoException : Exception
+    public class ContatoNaoEncontradoException : Exception
     {
         public ContatoNaoEncontradoException()
         {

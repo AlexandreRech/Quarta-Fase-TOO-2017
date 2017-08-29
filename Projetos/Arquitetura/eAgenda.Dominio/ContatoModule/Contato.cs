@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eAgenda.ConsoleApp
+namespace eAgenda.Dominio.ContatoModule
 {
     public class Contato
     {
@@ -31,9 +31,9 @@ namespace eAgenda.ConsoleApp
         public string Empresa { get; set; }
 
         public string  Cargo { get; set; }
-        public int Numero { get; internal set; }
+        public int Numero { get; set; }
 
-        internal void Validar()
+        public void Validar()
         {
             if (string.IsNullOrEmpty(Nome))
                 throw new ContatoInvalidoException("O Nome do Contato é obrigatório preenchimento");

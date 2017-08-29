@@ -107,6 +107,11 @@ namespace eAgenda.ConsoleApp
                     cadastroSelecionado = new ContatoConsole();
                     return cadastroSelecionado;
                 }
+                if (opcao == ConsoleKey.F3)
+                {
+                    cadastroSelecionado = new DespesaConsole();
+                    return cadastroSelecionado;
+                }
 
                 NotificadorConsole.MostrarMensagem("ERRO", "Opção inválida! Aperte uma tecla para continuar...");
 
@@ -125,6 +130,8 @@ namespace eAgenda.ConsoleApp
             Console.WriteLine("Digite F1 para gerenciar Tarefas");
 
             Console.WriteLine("Digite F2 para gerenciar Contatos");
+
+            Console.WriteLine("Digite F3 para gerenciar Despesas");
 
             Console.WriteLine();
 

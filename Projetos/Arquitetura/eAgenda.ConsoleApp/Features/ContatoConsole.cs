@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using System.Linq;
+using eAgenda.Dominio.ContatoModule;
 
 namespace eAgenda.ConsoleApp
 {
     public class ContatoConsole : CadastroConsole
     {
-        private static int _contador = 0;
-
-        private static List<Contato> _contatos = new List<Contato>();
-
+        private ControladorContato _controlador = new ControladorContato();
+        
         public ContatoConsole() 
             : base("Cadastro de Contatos")
         {
@@ -38,7 +37,7 @@ namespace eAgenda.ConsoleApp
                 return false;
             }
 
-            RegistrarNovoContato(novoContato);
+            _controlador.RegistrarNovoContato(novoContato);
 
             return true;
         }
@@ -58,7 +57,7 @@ namespace eAgenda.ConsoleApp
 
             contatoAtualizado.Numero = contatoEncontrado.Numero;
 
-            AtualizarContato(contatoAtualizado);
+            _controlador.AtualizarContato(contatoAtualizado);
 
             return true;
         }
@@ -80,7 +79,7 @@ namespace eAgenda.ConsoleApp
 
             if (Console.ReadKey().Key == ConsoleKey.S)
             {
-                ExcluirContato(contatoEncontrado);
+                _controlador.ExcluirContato(contatoEncontrado);
 
                 return true;
             }
@@ -92,11 +91,13 @@ namespace eAgenda.ConsoleApp
         {
             Console.Clear();
 
-            if (operacao == "ATUALIZAÇÃO" || operacao == "EXCLUSÃO")
-            {
-                MostrarContatos(_contatos);
+            List<Contato> contatos = _controlador.SelecionarContatos();
 
-                return _contatos.Count > 0;
+            if (operacao == "ATUALIZAÇÃO" || operacao == "EXCLUSÃO")
+            {                
+                MostrarContatos(contatos);
+
+                return contatos.Count > 0;
             }
 
             ConsoleKey opcao;
@@ -132,7 +133,7 @@ namespace eAgenda.ConsoleApp
                         Console.WriteLine("Visualizando Todos Contatos: ");
                         Console.WriteLine();
 
-                        MostrarContatos(_contatos);
+                        MostrarContatos(contatos);
 
                         break;                  
 
@@ -148,9 +149,9 @@ namespace eAgenda.ConsoleApp
         }
 
         private void MostrarContatosPorOrdemAlfabetica()
-        {            
+        {
             //List<Contato> contatosOrdenados = new List<Contato>(_contatos);
-            
+
             /**ordenação utilizando delegates
             contatosOrdenados.Sort(Contato.OrdenarPeloNome);
             */
@@ -166,64 +167,21 @@ namespace eAgenda.ConsoleApp
             contatosOrdenados.Sort((a, b) => string.Compare(a.Nome, b.Nome));
             */
 
+            List<Contato> contatos = _controlador.SelecionarContatos();
+
             //Extesion Methods + Collections + Generics + Expressão Lambda
-            MostrarContatos(_contatos.OrderBy(c => c.Nome).ToList());
+            MostrarContatos(contatos.OrderBy(c => c.Nome).ToList());
         }
-
-       
         
-
-        #region métodos privados
-        private Contato SelecionarContatoPorNumero(int numero)
-        {
-            Contato contatoEncontrado = null;
-
-            foreach (Contato t in _contatos)
-            {
-                if (t.Numero == numero)
-                {
-                    contatoEncontrado = t;
-                    break;
-                }
-            }
-
-            return contatoEncontrado;
-        }
-
-        private void AtualizarContato(Contato contatoAtualizado)
-        {
-            Contato c = SelecionarContatoPorNumero(contatoAtualizado.Numero);
-
-            c.Nome = contatoAtualizado.Nome;
-            c.Telefone = contatoAtualizado.Telefone;
-            c.Email = contatoAtualizado.Email;
-            c.Empresa = contatoAtualizado.Empresa;
-            c.Cargo = contatoAtualizado.Cargo;
-        }
-
-        private void RegistrarNovoContato(Contato novoContato)
-        {
-            _contador++;
-
-            novoContato.Numero = _contador;
-
-            _contatos.Add(novoContato);
-        }
-
-        private void ExcluirContato(Contato contatoEncontrado)
-        {
-            _contatos.Remove(contatoEncontrado);
-        }
-
-        #endregion
-
         #region métodos privados de tela
 
         private void MostrarContatosAgrupados()
         {
             HashSet<string> cargos = new HashSet<string>();
 
-            foreach (Contato c in _contatos)
+            List<Contato> contatos = _controlador.SelecionarContatos();
+
+            foreach (Contato c in contatos)
             {
                 cargos.Add(c.Cargo);
             }
@@ -232,7 +190,7 @@ namespace eAgenda.ConsoleApp
             {
                 Console.WriteLine(cargo);
 
-                foreach (Contato contato in _contatos)
+                foreach (Contato contato in contatos)
                 {
                     if (contato.Cargo != cargo)
                         continue;
@@ -292,7 +250,7 @@ namespace eAgenda.ConsoleApp
 
                 try
                 {
-                    registroSelecionado = SelecionarContatoPorNumero(numero);
+                    registroSelecionado = _controlador.SelecionarContatoPorNumero(numero);
 
                     Console.Clear();
                 }

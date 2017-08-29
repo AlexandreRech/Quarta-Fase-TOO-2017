@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace eAgenda.ConsoleApp
+namespace eAgenda.Dominio.TarefaModule
 {
     public class Subitem
     {
@@ -20,7 +20,7 @@ namespace eAgenda.ConsoleApp
         public int Numero { get { return _numero; } }
         public string Titulo { get { return _titulo; } }
 
-        internal bool EstaConcluido()
+        public bool EstaConcluido()
         {
             return _estaConcluido;
         }

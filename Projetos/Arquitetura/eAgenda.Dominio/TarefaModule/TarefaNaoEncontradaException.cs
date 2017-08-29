@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eAgenda.ConsoleApp
+namespace eAgenda.Dominio.TarefaModule
 {
     public class TarefaNaoEncontradaException : Exception
     {

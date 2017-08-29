@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace eAgenda.ConsoleApp
+namespace eAgenda.Dominio.TarefaModule
 {
     public class Tarefa 
     {
